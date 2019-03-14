@@ -1,0 +1,34 @@
+$mdc-theme-primary: #FFF;
+$mdc-theme-secondary: #0E578C;
+$mdc-theme-background: #fff;
+
+.mid-opacity{
+	opacity: .7;
+}
+
+.grad-div{
+	background: linear-gradient(241deg, #0e578c, #311b92, #304ffe);
+	background-size: 600% 600%;
+
+	-webkit-animation: AnimationName 15s ease infinite;
+	-moz-animation: AnimationName 15s ease infinite;
+	animation: AnimationName 15s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:0% 47%}
+	    50%{background-position:100% 54%}
+	    100%{background-position:0% 47%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:0% 47%}
+	    50%{background-position:100% 54%}
+	    100%{background-position:0% 47%}
+	}
+	@keyframes AnimationName { 
+	    0%{background-position:0% 47%}
+	    50%{background-position:100% 54%}
+	    100%{background-position:0% 47%}
+	}
+}
+
+@import "node_modules/material-components-web/material-components-web";
