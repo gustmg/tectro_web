@@ -2,6 +2,20 @@ $mdc-theme-primary: #FFF;
 $mdc-theme-secondary: #0E578C;
 $mdc-theme-background: #fff;
 
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
 .mid-opacity{
 	opacity: .7;
 }
