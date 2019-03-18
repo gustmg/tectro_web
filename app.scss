@@ -2,8 +2,131 @@ $mdc-theme-primary: #FFF;
 $mdc-theme-secondary: #0E578C;
 $mdc-theme-background: #fff;
 
-html, body {
+html, body { 
   height: 100%;
+}
+
+#background-pc{
+  background: url(/img/compu.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#background-print{
+  background: url(/img/printer.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#background-connect{
+  background: url(/img/conectividad.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#background-accessories{
+  background: url(/img/accesorios.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#background-code{
+  background: url(/img/code.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.background{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.myContainer{
+  position: relative;
+  overflow: hidden;
+}
+
+.fixed{
+  position:fixed;
+}
+
+.menu-list{
+  list-style-type: none;
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.no-padding-top{
+  padding-top: 0 !important;
+}
+
+.no-padding-bottom{
+  padding-bottom: 0 !important;
+}
+
+.no-margin{
+  margin: 0 !important;
+}
+
+.my-button{
+  border-color: $mdc-theme-secondary !important;
+  border-radius: 18px !important;
+}
+
+.my-button-white{
+  border-color: $mdc-theme-primary !important;
+  border-radius: 18px !important;
+}
+
+.myContainer:before
+{
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    z-index: -1;
+    background: url(/img/tec.png) no-repeat;
+    background-position: center;
+    animation: rotation 30s infinite linear;
+    opacity: 0.4;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@import "@material/image-list/mdc-image-list";
+
+.my-image-list {
+  @include mdc-image-list-standard-columns(1);
+  max-width: 200px;
 }
 
 .full-height {
@@ -90,7 +213,6 @@ header {
     margin:7px auto;
     background-color:#0E578C;
     transition:all 0.3s ease-in-out;
-    box-shadow:0 0 3px 1px rgba(0,0,0,.3);
     
     &:nth-child(2) {
       width:20px;

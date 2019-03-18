@@ -2,90 +2,94 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="bundle.css">
+		<link rel="stylesheet" href="css/fullpage.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 		rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	</head>
-	<body style="margin: 0;">
-		<header>
-			<input type='checkbox' id='toggle' style='display:none;'/>
-			<label class='toggle-btn toggle-btn__cross' for='toggle'>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-			</label>
-			<nav>
-				<ul>
-					<li><a href="mantenimiento.html">Mantenimiento a equipo de cómputo</a></li><br>
-					<li><a href="impresoras.html">Servicio a impresoras</a></li><br>
-					<li><a href="conectividad.html">Conectividad</a></li><br>
-					<li><a href="ventas.html">Ventas y accesorios</a></li><br>
-					<li><a href="desarrollo.html">Desarrollo</a></li><br>
-				</ul>
-			</nav>
-			<a href="tel:2227853012" class="main-button" style="text-decoration: none; color:#0E578C;"><i class="material-icons" style="font-size: 36px;">phone</i></a>
+	<body style="max-width: 1200px; margin: 0 auto;">
+		<div id="background-pc" class="full-height fixed background"></div>
+		<div id="background-print" class="full-height fixed background"></div>
+		<div id="background-connect" class="full-height fixed background"></div>
+		<div id="background-accessories" class="full-height fixed background"></div>
+		<div id="background-code" class="full-height fixed background"></div>
+		<header class="fixed myContainer full-height" style="max-width: 300px;">
+			<div class="mdc-layout-grid full-height">
+				<div class="mdc-layout-grid__inner full-height">
+					<div class="mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-middle" align="center">
+						<ul id="menu-list" class="menu-list no-padding">
+							<li><span class="mdc-typography--overline">Computadoras</span></li>
+							<li><span class="mdc-typography--overline">Impresoras</span></li>
+							<li><span class="mdc-typography--overline">Conectividad</span></li>
+							<li><span class="mdc-typography--overline">Ventas y accesorios</span></li>
+							<li><span class="mdc-typography--overline">Desarrollo</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
-	    <main class="site-content mdc-top-app-bar--fixed-adjust">
-	    	<div class="mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6" align="center">
-	    				<img src="img/mtto.svg" width="300px">
-	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6 valign">
-	    				<h3 class="mdc-typography--headline3 mdc-theme--secondary"><b>Mantenimiento a equipo de cómputo</b></h3>
-	    				<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<h3 class="mdc-typography--headline3 mdc-theme--secondary"><b>Servicio a impresoras</b></h3>
-	    				<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<div class="mdc-layout-grid__cell--span-6" align="center">
-	    					<img src="img/printer.svg" width="300px">
+	    <main>
+	    	<div class="mdc-layout-grid no-padding-top no-padding-bottom">
+	    		<div id="fullpage" class="mdc-layout-grid__inner">
+	    			<div id="pc" class="mdc-layout-grid__cell--span-12 section">
+	    				<div class="mdc-layout-grid__inner full-height">
+	    					<div class="mdc-layout-grid__cell--span-3"></div>
+	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Mantenimiento a equipo de cómputo</b></h4>
+	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button">
+	    							<span class="mdc-button__label">Más información</span>
+	    						</button>
+	    					</div>
 	    				</div>
 	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<div class="mdc-layout-grid__cell--span-6" align="center">
-	    					<img src="img/conectividad.svg" width="300px">
+	    			<div id="print" class="mdc-layout-grid__cell--span-12 section">
+	    				<div class="mdc-layout-grid__inner full-height">
+	    					<div class="mdc-layout-grid__cell--span-3"></div>
+	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Servicio a impresoras</b></h4>
+	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+	    							<span class="mdc-button__label">Más información</span>
+	    						</button>
+	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<h3 class="mdc-typography--headline3 mdc-theme--secondary"><b>Conectividad</b></h3>
-	    				<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<h3 class="mdc-typography--headline3 mdc-theme--secondary"><b>Ventas y accesorios</b></h3>
-	    				<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<div class="mdc-layout-grid__cell--span-6" align="center">
-	    					<img src="img/shop.svg" width="300px">
+	    			<div id="connect" class="mdc-layout-grid__cell--span-12 section">
+	    				<div class="mdc-layout-grid__inner full-height">
+	    					<div class="mdc-layout-grid__cell--span-3"></div>
+	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Conectividad</b></h4>
+	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+	    							<span class="mdc-button__label">Más información</span>
+	    						</button>
+	    					</div>
 	    				</div>
 	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<div class="mdc-layout-grid__cell--span-6" align="center">
-	    					<img src="img/desarrollo.svg" width="300px">
+	    			<div id="accessories" class="mdc-layout-grid__cell--span-12 section">
+	    				<div class="mdc-layout-grid__inner full-height">
+	    					<div class="mdc-layout-grid__cell--span-3"></div>
+	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Ventas y accesorios</b></h4>
+	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button">
+	    							<span class="mdc-button__label">Más información</span>
+	    						</button>
+	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6">
-	    				<h3 class="mdc-typography--headline3 mdc-theme--secondary"><b>Desarrollo</b></h3>
-	    				<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    			<div id="code" class="mdc-layout-grid__cell--span-12 section">
+	    				<div class="mdc-layout-grid__inner full-height">
+	    					<div class="mdc-layout-grid__cell--span-3"></div>
+	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Desarrollo</b></h4>
+	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+	    							<span class="mdc-button__label">Más información</span>
+	    						</button>
+	    					</div>
+	    				</div>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -93,7 +97,7 @@
 	    		<div class="mdc-layout-grid__inner">
 	    			<div class="mdc-layout-grid__cell--span-6" align="center">
 	    				<div class="map-responsive">
-	    					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8182716820643!2d-98.25785068569282!3d19.071726057064154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6f2f3821217%3A0x446f64e0afb8c40b!2sTectro+Centro+De+Soluciones+Tecnol%C3%B3gicas!5e0!3m2!1ses!2smx!4v1471390949276" width="480" height="360" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+	    					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8182716820643!2d-98.25785068569282!3d19.071726057064154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6f2f3821217%3A0x446f64e0afb8c40b!2sTectro+Centro+De+Soluciones+Tecnol%C3%B3gicas!5e0!3m2!1ses!2smx!4v1471390949276" width="480" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 	    				</div>
 	    			</div>
 	    			<div class="mdc-layout-grid__cell--span-6 mdc-theme--primary" align="center">
@@ -109,16 +113,62 @@
 	    		</div>
 	    	</footer>
 	    </main>
-		
-		
 		<script src="js/jquery-3.3.1.min.js" async></script>
+		<script src="js/fullpage.min.js" async></script>
 		<script src="bundle.js" async></script>
 		<script type="text/javascript" charset="utf-8" async defer>
-			$( document ).ready(function() {
-			    $( ".toggle-btn" ).click(function() {
-			      $( ".main-button" ).toggleClass("white");
-			      $( ".map" ).toggleClass("hide");
-			    });
+			var backgroundPc = document.getElementById("background-pc");
+			var backgroundPrint = document.getElementById("background-print");
+			var backgroundConnect = document.getElementById("background-connect");
+			var backgroundAccessories = document.getElementById("background-accessories");
+			var backgroundCode = document.getElementById("background-code");
+			var menuList= document.getElementById("menu-list");
+			var myFullpage = new fullpage('#fullpage', {
+				afterRender: function(){
+					
+				},
+				onLeave: function(origin, destination, direction){
+					if(destination.item.id == "pc"){
+						backgroundPc.style.opacity=1;
+						backgroundPrint.style.opacity=0;
+						backgroundConnect.style.opacity=0;
+						backgroundAccessories.style.opacity=0;
+						backgroundCode.style.opacity=0;
+						menuList.style.color="black";
+					}
+					if(destination.item.id == "print"){
+						backgroundPc.style.opacity=0;
+						backgroundPrint.style.opacity=1;
+						backgroundConnect.style.opacity=0;
+						backgroundAccessories.style.opacity=0;
+						backgroundCode.style.opacity=0;
+						menuList.style.color="white";
+					}
+					if(destination.item.id == "connect"){
+						backgroundPc.style.opacity=0;
+						backgroundPrint.style.opacity=0;
+						backgroundConnect.style.opacity=1;
+						backgroundAccessories.style.opacity=0;
+						backgroundCode.style.opacity=0;
+						menuList.style.color="white";
+					}
+					if(destination.item.id == "accessories"){
+						backgroundPc.style.opacity=0;
+						backgroundPrint.style.opacity=0;
+						backgroundConnect.style.opacity=0;
+						backgroundAccessories.style.opacity=1;
+						backgroundCode.style.opacity=0;
+						menuList.style.color="black";
+					}
+					if(destination.item.id == "code"){
+						backgroundPc.style.opacity=0;
+						backgroundPrint.style.opacity=0;
+						backgroundConnect.style.opacity=0;
+						backgroundAccessories.style.opacity=0;
+						backgroundCode.style.opacity=1;
+						menuList.style.color="white";
+					}
+				}
 			});
 		</script>
 	</body>

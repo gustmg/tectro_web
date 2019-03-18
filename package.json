@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "fullpage.js": "^3.0.4",
-    "material-components-web": "^1.0.1"
+    "material-components-web": "^1.0.1",
+    "sweet-scroll": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
