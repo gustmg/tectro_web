@@ -7,7 +7,8 @@
 		rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	</head>
-	<body style="max-width: 1200px; margin: 0 auto;">
+	<body style="max-width: 1360px;">
+		<a id="phone-button" href="tel:2227853012" class="mdc-icon-button material-icons phone-button mdc-theme--secondary">phone</a>
 		<div id="background-pc" class="full-height fixed background"></div>
 		<div id="background-print" class="full-height fixed background"></div>
 		<div id="background-connect" class="full-height fixed background"></div>
@@ -29,7 +30,7 @@
 			</div>
 		</header>
 	    <main>
-	    	<div class="mdc-layout-grid no-padding-top no-padding-bottom">
+	    	<div class="mdc-layout-grid no-padding-top no-padding-bottom no-padding">
 	    		<div id="fullpage" class="mdc-layout-grid__inner">
 	    			<div id="pc" class="mdc-layout-grid__cell--span-12 section">
 	    				<div class="mdc-layout-grid__inner full-height">
@@ -91,32 +92,47 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    		</div>
-	    	</div>
-	    	<footer class="grad-div mdc-layout-grid">
-	    		<div class="mdc-layout-grid__inner">
-	    			<div class="mdc-layout-grid__cell--span-6" align="center">
-	    				<div class="map-responsive">
-	    					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8182716820643!2d-98.25785068569282!3d19.071726057064154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6f2f3821217%3A0x446f64e0afb8c40b!2sTectro+Centro+De+Soluciones+Tecnol%C3%B3gicas!5e0!3m2!1ses!2smx!4v1471390949276" width="480" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+	    			<div id="footer" class="mdc-layout-grid__cell--span-12 section grad-div background">
+	    				<div class="mdc-layout-grid__inner">
+	    					<div class="mdc-layout-grid__cell--span-6">
+								<div class="mdc-text-field mdc-text-field--outlined">
+									<input type="text" id="name" class="mdc-text-field__input">
+									<div class="mdc-notched-outline mdc-theme--primary">
+										<div class="mdc-notched-outline__leading"></div>
+										<div class="mdc-notched-outline__notch">
+											<label for="name" class="mdc-floating-label mdc-theme--primary">Nombre</label>
+										</div>
+										<div class="mdc-notched-outline__trailing"></div>
+									</div>
+								</div><br><br>
+								
+								
+			    				<!-- <div class="map-responsive">
+			    					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8182716820643!2d-98.25785068569282!3d19.071726057064154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6f2f3821217%3A0x446f64e0afb8c40b!2sTectro+Centro+De+Soluciones+Tecnol%C3%B3gicas!5e0!3m2!1ses!2smx!4v1471390949276" width="480" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+			    				</div> -->
+			    			</div>
+			    			
+			    			<div class="mdc-layout-grid__cell--span-6 mdc-theme--primary" align="center">
+			    				<span class="mdc-typography--caption"><b>DIRECCIÓN</b></span>
+			    				<p class="mdc-typography--body1">Calle Encino 1-A, Viveros Santa Cruz, Puebla, Pue.</p><br>
+			    				<span class="mdc-typography--caption"><b>HORARIOS DE ATENCIÓN</b></span>
+			    				<p class="mdc-typography--body1">Lunes a Viernes: 10 am - 7 pm<br>Sábados: 11 am - 4 pm</p><br>
+			    				<span class="mdc-typography--caption"><b>CORREO ELECTRÓNICO</b></span>
+			    				<p class="mdc-typography--body1">tectrotecnologico@gmail.com<br>ventas@tectro.com.mx</p><br>
+			    				<span class="mdc-typography--caption"><b>TELÉFONOS</b></span>
+			    				<p class="mdc-typography--body1">Local: 01 222 785 30 12<br>Móvil: 044 222 908 78 11</p>
+			    			</div>
+
 	    				</div>
 	    			</div>
-	    			<div class="mdc-layout-grid__cell--span-6 mdc-theme--primary" align="center">
-	    				<span class="mdc-typography--caption"><b>DIRECCIÓN</b></span>
-	    				<p class="mdc-typography--body1">Calle Encino 1-A, Viveros Santa Cruz, Puebla, Pue.</p><br>
-	    				<span class="mdc-typography--caption"><b>HORARIOS DE ATENCIÓN</b></span>
-	    				<p class="mdc-typography--body1">Lunes a Viernes: 10 am - 7 pm<br>Sábados: 11 am - 4 pm</p><br>
-	    				<span class="mdc-typography--caption"><b>CORREO ELECTRÓNICO</b></span>
-	    				<p class="mdc-typography--body1">tectrotecnologico@gmail.com<br>ventas@tectro.com.mx</p><br>
-	    				<span class="mdc-typography--caption"><b>TELÉFONOS</b></span>
-	    				<p class="mdc-typography--body1">Local: 01 222 785 30 12<br>Móvil: 044 222 908 78 11</p>
-	    			</div>
 	    		</div>
-	    	</footer>
+	    	</div>
 	    </main>
 		<script src="js/jquery-3.3.1.min.js" async></script>
 		<script src="js/fullpage.min.js" async></script>
 		<script src="bundle.js" async></script>
 		<script type="text/javascript" charset="utf-8" async defer>
+			var phoneButton = document.getElementById("phone-button");
 			var backgroundPc = document.getElementById("background-pc");
 			var backgroundPrint = document.getElementById("background-print");
 			var backgroundConnect = document.getElementById("background-connect");
@@ -135,6 +151,8 @@
 						backgroundAccessories.style.opacity=0;
 						backgroundCode.style.opacity=0;
 						menuList.style.color="black";
+						phoneButton.classList.remove("mdc-theme--primary");
+						phoneButton.classList.add("mdc-theme--secondary");
 					}
 					if(destination.item.id == "print"){
 						backgroundPc.style.opacity=0;
@@ -143,6 +161,8 @@
 						backgroundAccessories.style.opacity=0;
 						backgroundCode.style.opacity=0;
 						menuList.style.color="white";
+						phoneButton.classList.remove("mdc-theme--secondary");
+						phoneButton.classList.add("mdc-theme--primary");
 					}
 					if(destination.item.id == "connect"){
 						backgroundPc.style.opacity=0;
@@ -151,6 +171,8 @@
 						backgroundAccessories.style.opacity=0;
 						backgroundCode.style.opacity=0;
 						menuList.style.color="white";
+						phoneButton.classList.remove("mdc-theme--secondary");
+						phoneButton.classList.add("mdc-theme--primary");
 					}
 					if(destination.item.id == "accessories"){
 						backgroundPc.style.opacity=0;
@@ -159,6 +181,8 @@
 						backgroundAccessories.style.opacity=1;
 						backgroundCode.style.opacity=0;
 						menuList.style.color="black";
+						phoneButton.classList.remove("mdc-theme--primary");
+						phoneButton.classList.add("mdc-theme--secondary");
 					}
 					if(destination.item.id == "code"){
 						backgroundPc.style.opacity=0;
@@ -167,6 +191,8 @@
 						backgroundAccessories.style.opacity=0;
 						backgroundCode.style.opacity=1;
 						menuList.style.color="white";
+						phoneButton.classList.remove("mdc-theme--secondary");
+						phoneButton.classList.add("mdc-theme--primary");
 					}
 				}
 			});
