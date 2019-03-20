@@ -3,9 +3,30 @@ $mdc-theme-secondary: #0E578C;
 $mdc-theme-background: #fff;
 
 @import "@material/textfield/mdc-text-field";
+@import "@material/dialog/mdc-dialog";
 
 html, body { 
   height: 100%;
+}
+
+@media(max-width: 480px){
+  html, body, main {margin: 0; height: 100%; overflow: hidden}
+
+  .hide-on-mobile{
+    display: none !important;
+  }
+
+  header{
+    padding:0 !important;
+    width: 100% !important;
+  }
+
+  .mobile-main-button{
+    visibility: visible !important;
+    width: 75%;
+    left: 50%;
+    margin-left: -37.5%;
+  }
 }
 
 .phone-button{
@@ -69,10 +90,10 @@ html, body {
   margin: 0 auto;
 }
 
-.myContainer{
-  position: relative;
-  overflow: hidden;
-}
+// .myContainer{
+//   position: relative;
+//   overflow: hidden;
+// }
 
 .fixed{
   position:fixed;
@@ -80,6 +101,15 @@ html, body {
 
 .menu-list{
   list-style-type: none;
+}
+
+.active-menu{
+  opacity: 1 !important;
+  font-size: 16px !important;
+}
+
+.pc-menu, .print-menu, .connect-menu, .accessories-menu, .code-menu{
+  opacity: 0.8;
 }
 
 .no-padding{
@@ -101,6 +131,12 @@ html, body {
 .my-button{
   border-color: $mdc-theme-secondary !important;
   border-radius: 18px !important;
+}
+
+.mobile-main-button{
+  visibility: hidden;
+  position:fixed !important;
+  bottom:24px;
 }
 
 .my-button-white{
@@ -130,15 +166,12 @@ html, body {
     }
 }
 
-@import "@material/image-list/mdc-image-list";
-
-.my-image-list {
-  @include mdc-image-list-standard-columns(1);
-  max-width: 200px;
-}
-
 .full-height {
   height: 100%;
+}
+
+.full-width{
+  width: 100%;
 }
 
 .valign{
