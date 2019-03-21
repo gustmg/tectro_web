@@ -7,14 +7,14 @@
 		rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	</head>
-	<body style="max-width: 1920px;">
+	<body style="max-width: 1920px;margin: 0 auto;">
 		<a id="phone-button" href="tel:2227853012" class="mdc-icon-button material-icons phone-button mdc-theme--secondary">phone</a>
 		<div id="background-pc" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-print" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-connect" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-accessories" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-code" class="full-height fixed background"></div>
-		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 24px;">
+		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 24px;z-index: 9999;">
 			<button id="contact-modal-trigger" class="mdc-button mdc-button--outlined mdc-theme--secondary my-button mobile-main-button" onclick="dialog.MDCDialog.open();">
 				<span class="mdc-button__label">Solicitar cotización</span>
 			</button>
@@ -22,76 +22,101 @@
 				<div class="mdc-layout-grid__inner full-height">
 					<div class="mdc-layout-grid__cell--span-12 mdc-layout-grid__cell--align-middle" align="center">
 						<ul id="menu-list" class="menu-list no-padding">
-							<li><span id="pc-menu" class="mdc-typography--overline pc-menu active-menu">Computadoras</span></li>
-							<li><span id="print-menu" class="mdc-typography--overline print-menu">Impresoras</span></li>
-							<li><span id="connect-menu" class="mdc-typography--overline connect-menu">Conectividad</span></li>
-							<li><span id="accessories-menu" class="mdc-typography--overline accessories-menu">Ventas y accesorios</span></li>
-							<li><span id="code-menu" class="mdc-typography--overline code-menu">Desarrollo</span></li>
+							<li>
+								<span id="pc-menu" class="mdc-typography--overline pc-menu active-menu selectable" onclick="sectionHandler(1);">
+									<i class="material-icons menu-icon" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Computadoras
+								</span>
+							</li>
+							<li>
+								<span id="print-menu" class="mdc-typography--overline print-menu selectable" onclick="sectionHandler(2);">
+									<i class="material-icons menu-icon hide" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Impresoras
+								</span>
+							</li>
+							<li>
+								<span id="connect-menu" class="mdc-typography--overline connect-menu selectable" onclick="sectionHandler(3);">
+									<i class="material-icons menu-icon hide" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Conectividad
+								</span>
+							</li>
+							<li>
+								<span id="accessories-menu" class="mdc-typography--overline accessories-menu selectable" onclick="sectionHandler(4);">
+									<i class="material-icons menu-icon hide" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Ventas y accesorios
+								</span>
+							</li>
+							<li>
+								<span id="code-menu" class="mdc-typography--overline code-menu selectable" onclick="sectionHandler(5);">
+									<i class="material-icons menu-icon hide" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Desarrollo
+								</span>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</header>
-<div id="dialog" data-mdc-auto-init="MDCDialog" class="mdc-dialog"
-role="alertdialog"
-aria-modal="true"
-aria-labelledby="my-dialog-title"
-aria-describedby="my-dialog-content">
-	<div class="mdc-dialog__container full-height full-width">
-		<div class="mdc-dialog__surface full-height mdc-theme--secondary-bg">
-			<div class="mdc-dialog__content" id="my-dialog-content">
-				<h4 class="mdc-dialog__title" id="my-dialog-title">¡Escríbenos!</h4>
-				<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-					<input type="text" id="name" class="mdc-text-field__input mdc-theme--primary">
-					<div class="mdc-notched-outline mdc-theme--primary">
-						<div class="mdc-notched-outline__leading"></div>
-						<div class="mdc-notched-outline__notch">
-							<label for="name" class="mdc-floating-label mdc-theme--primary">Nombre</label>
-						</div>
-						<div class="mdc-notched-outline__trailing"></div>
+		<div id="dialog" data-mdc-auto-init="MDCDialog" class="mdc-dialog"
+		role="alertdialog"
+		aria-modal="true"
+		aria-labelledby="my-dialog-title"
+		aria-describedby="my-dialog-content">
+			<div class="mdc-dialog__container full-height full-width">
+				<div class="mdc-dialog__surface full-height mdc-theme--secondary-bg">
+					<div class="mdc-dialog__content" id="my-dialog-content" align="center">
+						<h4 class="mdc-dialog__title mdc-theme--primary" id="my-dialog-title" >¡Escríbenos!</h4><BR>
+						<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+							<input type="text" id="name" class="mdc-text-field__input mdc-theme--primary">
+							<div class="mdc-notched-outline mdc-theme--primary">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="name" class="mdc-floating-label mdc-theme--primary">Nombre</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div><br><br>
+						<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+							<input type="text" id="phone" class="mdc-text-field__input mdc-theme--primary">
+							<div class="mdc-notched-outline mdc-theme--primary">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="phone" class="mdc-floating-label mdc-theme--primary">Teléfono</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div><br><br>
+						<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+							<input type="text" id="mail" class="mdc-text-field__input mdc-theme--primary">
+							<div class="mdc-notched-outline mdc-theme--primary">
+								<div class="mdc-notched-outline__leading"></div>
+								<div class="mdc-notched-outline__notch">
+									<label for="mail" class="mdc-floating-label mdc-theme--primary">E-mail</label>
+								</div>
+								<div class="mdc-notched-outline__trailing"></div>
+							</div>
+						</div><br><br>
+						<div class="mdc-text-field mdc-text-field--textarea" data-mdc-auto-init="MDCTextField">
+						  <textarea id="textarea" class="mdc-text-field__input mdc-theme--primary" rows="3" cols="20"></textarea>
+						  <div class="mdc-notched-outline">
+						    <div class="mdc-notched-outline__leading"></div>
+						    <div class="mdc-notched-outline__notch">
+						      <label for="textarea" class="mdc-floating-label mdc-theme--primary">Mensaje</label>
+						    </div>
+						    <div class="mdc-notched-outline__trailing"></div>
+						  </div>
+						</div><br><br><BR>
+						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+							<span class="mdc-button__label">Cancelar</span>
+						</button>&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+							<span class="mdc-button__label">Enviar</span>
+						</button>
 					</div>
-				</div><br><br>
-				<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-					<input type="text" id="phone" class="mdc-text-field__input mdc-theme--primary">
-					<div class="mdc-notched-outline mdc-theme--primary">
-						<div class="mdc-notched-outline__leading"></div>
-						<div class="mdc-notched-outline__notch">
-							<label for="phone" class="mdc-floating-label mdc-theme--primary">Teléfono</label>
-						</div>
-						<div class="mdc-notched-outline__trailing"></div>
-					</div>
-				</div><br><br>
-				<div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-					<input type="text" id="mail" class="mdc-text-field__input mdc-theme--primary">
-					<div class="mdc-notched-outline mdc-theme--primary">
-						<div class="mdc-notched-outline__leading"></div>
-						<div class="mdc-notched-outline__notch">
-							<label for="mail" class="mdc-floating-label mdc-theme--primary">E-mail</label>
-						</div>
-						<div class="mdc-notched-outline__trailing"></div>
-					</div>
-				</div><br><br>
-				<div class="mdc-text-field mdc-text-field--textarea" data-mdc-auto-init="MDCTextField">
-				  <textarea id="textarea" class="mdc-text-field__input mdc-theme--primary" rows="3" cols="20"></textarea>
-				  <div class="mdc-notched-outline">
-				    <div class="mdc-notched-outline__leading"></div>
-				    <div class="mdc-notched-outline__notch">
-				      <label for="textarea" class="mdc-floating-label mdc-theme--primary">Mensaje</label>
-				    </div>
-				    <div class="mdc-notched-outline__trailing"></div>
-				  </div>
-				</div><br><br>
-				<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
-					<span class="mdc-button__label">Cancelar</span>
-				</button>
-				<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
-					<span class="mdc-button__label">Enviar</span>
-				</button>
+				</div>
 			</div>
+			<div class="mdc-dialog__scrim"></div>
 		</div>
-	</div>
-	<div class="mdc-dialog__scrim"></div>
-</div>
 	    <main class="hide-on-mobile">
 	    	<div class="mdc-layout-grid no-padding-top no-padding-bottom no-padding">
 	    		<div id="fullpage" class="mdc-layout-grid__inner">
@@ -101,7 +126,7 @@ aria-describedby="my-dialog-content">
 	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Mantenimiento a equipo de cómputo</b></h4>
 	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button">
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button" onclick="triggerContactForm();">
 	    							<span class="mdc-button__label">Solicitar cotización</span>
 	    						</button>
 	    					</div>
@@ -125,7 +150,7 @@ aria-describedby="my-dialog-content">
 	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Conectividad</b></h4>
 	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white" onclick="triggerContactForm();">
 	    							<span class="mdc-button__label">Solicitar cotización</span>
 	    						</button>
 	    					</div>
@@ -137,7 +162,7 @@ aria-describedby="my-dialog-content">
 	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Ventas y accesorios</b></h4>
 	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button">
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button" onclick="triggerContactForm();">
 	    							<span class="mdc-button__label">Solicitar cotización</span>
 	    						</button>
 	    					</div>
@@ -149,7 +174,7 @@ aria-describedby="my-dialog-content">
 	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Desarrollo</b></h4>
 	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
-	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
+	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white" onclick="triggerContactForm();">
 	    							<span class="mdc-button__label">Solicitar cotización</span>
 	    						</button>
 	    					</div>
@@ -190,7 +215,7 @@ aria-describedby="my-dialog-content">
 									</div>
 								</div><br><br>
 								<div class="mdc-text-field mdc-text-field--textarea" data-mdc-auto-init="MDCTextField">
-								  <textarea id="textarea" class="mdc-text-field__input mdc-theme--primary" rows="4" cols="20"></textarea>
+								  <textarea id="textarea" class="mdc-text-field__input mdc-theme--primary" rows="5" cols="18" style="resize: none;"></textarea>
 								  <div class="mdc-notched-outline">
 								    <div class="mdc-notched-outline__leading"></div>
 								    <div class="mdc-notched-outline__notch">
@@ -209,35 +234,30 @@ aria-describedby="my-dialog-content">
 			    					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8182716820643!2d-98.25785068569282!3d19.071726057064154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6f2f3821217%3A0x446f64e0afb8c40b!2sTectro+Centro+De+Soluciones+Tecnol%C3%B3gicas!5e0!3m2!1ses!2smx!4v1471390949276" width="480" height="480" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			    				</div>
 			    			</div>
-
 			    			<div class="mdc-layout-grid__cell--span-12 mdc-theme--primary">
 			    			<br>
 			    				<div class="mdc-layout-grid__inner">
 			    					<div class="mdc-layout-grid__cell--span-3" align="center">
 			    						<i class="material-icons">home</i>
 			    						<p class="mdc-typography--body2">
-			    							<!-- <span class="mdc-typography--caption"><b>DIRECCIÓN</b></span><br> -->
 			    							Calle Encino 1-A, Viveros Santa Cruz, Puebla, Pue.
 			    						</p>
 			    					</div>
 			    					<div class="mdc-layout-grid__cell--span-3" align="center">
 			    						<i class="material-icons">schedule</i>
 			    						<p class="mdc-typography--body2">
-			    							<!-- <span class="mdc-typography--caption"><b>HORARIOS DE ATENCIÓN</b></span><br> -->
 			    							Lunes a Viernes: 10 am - 7 pm<br>Sábados: 11 am - 4 pm
 			    						</p>
 			    					</div>
 			    					<div class="mdc-layout-grid__cell--span-3" align="center">
 			    						<i class="material-icons">mail</i>
 					    				<p class="mdc-typography--body2">
-					    					<!-- <span class="mdc-typography--caption"><b>CORREO ELECTRÓNICO</b></span><br> -->
 					    					tectrotecnologico@gmail.com<br>ventas@tectro.com.mx
 					    				</p>
 			    					</div>
 			    					<div class="mdc-layout-grid__cell--span-3" align="center">
 			    						<i class="material-icons">phone</i>
 					    				<p class="mdc-typography--body2">
-					    					<!-- <span class="mdc-typography--caption"><b>TELÉFONOS</b></span><br> -->
 					    					Local: 01 222 785 30 12<br>Móvil: 044 222 908 78 11
 					    				</p>
 			    					</div>			    					
@@ -252,6 +272,7 @@ aria-describedby="my-dialog-content">
 		<script src="bundle.js"></script>
 		<script src="js/fullpage.min.js"></script>
 		<script type="text/javascript" charset="utf-8" async defer>
+			$('#pc-menu .menu-icon').css('display', 'inline');
 			var phoneButton = document.getElementById("phone-button");
 			var backgroundPc = document.getElementById("background-pc");
 			var backgroundPrint = document.getElementById("background-print");
@@ -281,6 +302,8 @@ aria-describedby="my-dialog-content">
 						connectMenu.classList.remove("active-menu");
 						accessoriesMenu.classList.remove("active-menu");
 						codeMenu.classList.remove("active-menu");
+						$('.menu-icon').addClass('hide');
+						$('#pc-menu .menu-icon').removeClass('hide');
 					}
 					if(destination.item.id == "print"){
 						backgroundPc.style.opacity=0;
@@ -296,6 +319,8 @@ aria-describedby="my-dialog-content">
 						connectMenu.classList.remove("active-menu");
 						accessoriesMenu.classList.remove("active-menu");
 						codeMenu.classList.remove("active-menu");
+						$('.menu-icon').addClass('hide');
+						$('#print-menu .menu-icon').removeClass('hide');
 					}
 					if(destination.item.id == "connect"){
 						backgroundPc.style.opacity=0;
@@ -311,6 +336,8 @@ aria-describedby="my-dialog-content">
 						connectMenu.classList.add("active-menu");
 						accessoriesMenu.classList.remove("active-menu");
 						codeMenu.classList.remove("active-menu");
+						$('.menu-icon').addClass('hide');
+						$('#connect-menu .menu-icon').removeClass('hide');
 					}
 					if(destination.item.id == "accessories"){
 						backgroundPc.style.opacity=0;
@@ -326,6 +353,8 @@ aria-describedby="my-dialog-content">
 						connectMenu.classList.remove("active-menu");
 						accessoriesMenu.classList.add("active-menu");
 						codeMenu.classList.remove("active-menu");
+						$('.menu-icon').addClass('hide');
+						$('#accessories-menu .menu-icon').removeClass('hide');
 					}
 					if(destination.item.id == "code"){
 						backgroundPc.style.opacity=0;
@@ -341,6 +370,14 @@ aria-describedby="my-dialog-content">
 						connectMenu.classList.remove("active-menu");
 						accessoriesMenu.classList.remove("active-menu");
 						codeMenu.classList.add("active-menu");
+						$('.menu-icon').addClass('hide');
+						$('#code-menu .menu-icon').removeClass('hide');
+					}
+					if(destination.item.id == "footer"){
+						$('header').hide('fast');
+					}
+					if(origin.item.id == "footer"){
+						$('header').show('fast');
 					}
 				}
 			});
@@ -348,7 +385,21 @@ aria-describedby="my-dialog-content">
 			if ($(window).width() < 481) {
 		        fullpage_api.setAllowScrolling(false);
 		        fullpage_api.setKeyboardScrolling(false, 'down');
-		    }		
+		        $('.menu-icon').removeClass('hide');
+		    }
+
+		    function sectionHandler(section_number) {
+	    		if ($(window).width() < 481) {
+	    	        alert("Manda a pagina desde cel");
+	    	    }
+	    	    else{
+	    	    	fullpage_api.moveTo(section_number);
+	    	    }
+		    }	
+
+		    function triggerContactForm(){
+		    	fullpage_api.moveTo(6);
+		    }
 		</script>
 	</body>
 </html>
