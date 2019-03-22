@@ -37,7 +37,12 @@ html, body {
   }
 }
 
-
+.info-button{
+  position: fixed !important;
+  z-index: 9999;
+  top: 24px;
+  right: 72px;
+}
 
 .phone-button{
   position: fixed !important;

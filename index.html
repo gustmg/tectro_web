@@ -8,14 +8,15 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	</head>
 	<body style="max-width: 1920px;margin: 0 auto;">
+		<a id="info-button" class="mdc-icon-button material-icons info-button mdc-theme--secondary hide">help</a>
 		<a id="phone-button" href="tel:2227853012" class="mdc-icon-button material-icons phone-button mdc-theme--secondary">phone</a>
 		<div id="background-pc" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-print" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-connect" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-accessories" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-code" class="full-height fixed background"></div>
-		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 24px;z-index: 9999;">
-			<button id="contact-modal-trigger" class="mdc-button mdc-button--outlined mdc-theme--secondary my-button mobile-main-button" onclick="dialog.MDCDialog.open();">
+		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 24px;z-index: 9998;">
+			<button id="contact-modal-trigger" class="mdc-button mdc-button--outlined mdc-theme--secondary my-button mobile-main-button">
 				<span class="mdc-button__label">Solicitar cotización</span>
 			</button>
 			<div class="mdc-layout-grid full-height">
@@ -52,11 +53,58 @@
 									Desarrollo
 								</span>
 							</li>
+							<li>
+								<span id="contact-menu" class="mdc-typography--overline code-menu selectable hide-on-mobile" onclick="sectionHandler(6);">
+									<i class="material-icons menu-icon hide" style="vertical-align: middle !important;padding-bottom: 4px;">arrow_right</i>
+									Contacto
+								</span>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</header>
+		<div id="info-dialog" data-mdc-auto-init="MDCDialog" class="info-dialog mdc-dialog"
+		role="alertdialog"
+		aria-modal="true"
+		aria-labelledby="my-dialog-title"
+		aria-describedby="my-dialog-content">
+			<div class="mdc-dialog__container full-height full-width">
+				<div class="mdc-dialog__surface full-height mdc-theme--secondary-bg">
+					<div class="mdc-dialog__content" id="my-dialog-content" align="center">
+						<div class="mdc-layout-grid">
+							<div class="mdc-layout-grid__inner">
+								<div class="mdc-layout-grid__cell--span-12 mdc-theme--primary">
+									<i class="material-icons">home</i>
+									<p class="mdc-typography--body2">
+										Calle Encino 1-A, Viveros Santa Cruz, Puebla, Pue.
+									</p>
+				    			</div>
+				    			<div class="mdc-layout-grid__cell--span-12 mdc-theme--primary">
+									<i class="material-icons">schedule</i>
+		    						<p class="mdc-typography--body2">
+		    							Lunes a Viernes: 10 am - 7 pm<br>Sábados: 11 am - 4 pm
+		    						</p>
+				    			</div>
+				    			<div class="mdc-layout-grid__cell--span-12 mdc-theme--primary">
+									<i class="material-icons">mail</i>
+				    				<p class="mdc-typography--body2">
+				    					tectrotecnologico@gmail.com<br>ventas@tectro.com.mx
+				    				</p>
+				    			</div>
+				    			<div class="mdc-layout-grid__cell--span-12 mdc-theme--primary">
+									<i class="material-icons">phone</i>
+				    				<p class="mdc-typography--body2">
+				    					Local: 01 222 785 30 12<br>Móvil: 044 222 908 78 11
+				    				</p>
+				    			</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mdc-dialog__scrim"></div>
+		</div>
 		<div id="dialog" data-mdc-auto-init="MDCDialog" class="mdc-dialog"
 		role="alertdialog"
 		aria-modal="true"
@@ -374,6 +422,8 @@
 						$('#code-menu .menu-icon').removeClass('hide');
 					}
 					if(destination.item.id == "footer"){
+						phoneButton.classList.remove("mdc-theme--secondary");
+						phoneButton.classList.add("mdc-theme--primary");
 						$('header').hide('fast');
 					}
 					if(origin.item.id == "footer"){
@@ -383,6 +433,7 @@
 			});
 
 			if ($(window).width() < 481) {
+				$('.info-button').removeClass('hide');
 		        fullpage_api.setAllowScrolling(false);
 		        fullpage_api.setKeyboardScrolling(false, 'down');
 		        $('.menu-icon').removeClass('hide');
