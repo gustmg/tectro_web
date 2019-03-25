@@ -2,8 +2,8 @@ $mdc-theme-primary: #FFF;
 $mdc-theme-secondary: #0E578C;
 $mdc-theme-background: #fff;
 
-@import "@material/textfield/mdc-text-field";
-@import "@material/dialog/mdc-dialog";
+@import "node_modules/@material/textfield/mdc-text-field";
+@import "node_modules/@material/dialog/mdc-dialog";
 
 html, body { 
   height: 100%;

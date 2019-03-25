@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="bundle.css">
 		<link rel="stylesheet" href="css/fullpage.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -15,7 +16,7 @@
 		<div id="background-connect" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-accessories" class="full-height fixed background hide-on-mobile"></div>
 		<div id="background-code" class="full-height fixed background"></div>
-		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 24px;z-index: 9998;">
+		<header class="fixed myContainer full-height" style="width: 310px;padding-left: 48px;z-index: 9998;">
 			<button id="contact-modal-trigger" class="mdc-button mdc-button--outlined mdc-theme--secondary my-button mobile-main-button">
 				<span class="mdc-button__label">Solicitar cotización</span>
 			</button>
@@ -168,10 +169,10 @@
 	    <main class="hide-on-mobile">
 	    	<div class="mdc-layout-grid no-padding-top no-padding-bottom no-padding">
 	    		<div id="fullpage" class="mdc-layout-grid__inner">
-	    			<div id="pc" class="mdc-layout-grid__cell--span-12-desktop section hide-on-mobile">
-	    				<div class="mdc-layout-grid__inner full-height">
-	    					<div class="mdc-layout-grid__cell--span-3"></div>
-	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    			<div id="pc" class="mdc-layout-grid__cell--span-12 section hide-on-mobile">
+	    				<div class="mdc-layout-grid__inner full-height" align="left">
+	    					<div class="mdc-layout-grid__cell--span-5"></div>
+	    					<div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Mantenimiento a equipo de cómputo</b></h4>
 	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
 	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button" onclick="triggerContactForm();">
@@ -183,7 +184,7 @@
 	    			<div id="print" class="mdc-layout-grid__cell--span-12 section hide-on-mobile">
 	    				<div class="mdc-layout-grid__inner full-height">
 	    					<div class="mdc-layout-grid__cell--span-3"></div>
-	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    					<div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Servicio a impresoras</b></h4>
 	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
 	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white">
@@ -195,7 +196,7 @@
 	    			<div id="connect" class="mdc-layout-grid__cell--span-12 section hide-on-mobile">
 	    				<div class="mdc-layout-grid__inner full-height">
 	    					<div class="mdc-layout-grid__cell--span-3"></div>
-	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    					<div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Conectividad</b></h4>
 	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
 	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white" onclick="triggerContactForm();">
@@ -207,7 +208,7 @@
 	    			<div id="accessories" class="mdc-layout-grid__cell--span-12 section hide-on-mobile">
 	    				<div class="mdc-layout-grid__inner full-height">
 	    					<div class="mdc-layout-grid__cell--span-3"></div>
-	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    					<div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--secondary no-margin"><b>Ventas y accesorios</b></h4>
 	    						<p class="mdc-typography--headline6">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
 	    						<button class="mdc-button mdc-button--outlined mdc-theme--secondary my-button" onclick="triggerContactForm();">
@@ -219,7 +220,7 @@
 	    			<div id="code" class="mdc-layout-grid__cell--span-12 section hide-on-mobile">
 	    				<div class="mdc-layout-grid__inner full-height">
 	    					<div class="mdc-layout-grid__cell--span-3"></div>
-	    					<div class="mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-middle">
+	    					<div class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--align-middle">
 	    						<h4 class="mdc-typography--headline4 mdc-theme--primary no-margin"><b>Desarrollo</b></h4>
 	    						<p class="mdc-typography--headline6 mdc-theme--primary">Formateo, Instalación de paquetería, Refacciones, Cambios de pantalla, Actualizaciones de hardware, ven con nosotros y dale vida a tu equipo.</p>
 	    						<button class="mdc-button mdc-button--outlined mdc-theme--primary my-button-white" onclick="triggerContactForm();">
